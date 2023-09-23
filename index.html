@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="WebStudio HomeWork2 HTML">
-    <title>Web Studio</title>
+    <title>Rome_HW5-Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"/>
     <!-- CSS Normalizer -->
@@ -16,13 +16,13 @@
                 <a class="nav-pagelogo" href="./index.html">Web<span class="nav-pagelogo-style">Studio</span></a>
                 <ul class="nav-list">
                     <li class="nav-list-item" ><a class="nav-link studio-item" href="./index.html"> Studio </a> </li>
-                    <li class="nav-list-item"><a class ="nav-link"  href="./portfolio.html"> Portfolio</a> </li>   
-                    <li class="nav-list-item"> <a class ="nav-link"  href="./studio.html"> Contacts </a></li> 
+                    <li class="nav-list-item"><a class ="nav-link "  href="./portfolio.html"> Portfolio</a> </li>   
+                    <l">
+                <ul class="address-list">
+                    <li  class="address-list-item"><a clai class="nav-list-item"> <a class ="nav-link"  href="./studio.html"> Contacts </a></li> 
                 </ul>
             </nav>
-            <address class="address">
-                <ul class="address-list">
-                    <li  class="address-list-item"><a class="address-link" href="mailto:info@devstudio.com"> info@devstudio.com</a></li>
+            <address class="addressss="address-link" href="mailto:info@devstudio.com"> info@devstudio.com</a></li>
                     <li class="address-list-item"><a  class="address-link" href="tel:+11(000)111-11-11"> +11(000)111-11-11 </a></li>
                 </ul>
             </address>
@@ -33,9 +33,20 @@
         <section class="hero-section">
         <div class="container hero-container">
            <h1 class="hero-title"> Effective Solutions <br> for Your Business</h1>
-           <button class="hero-button" type="button">Order Service</button>
+           <button  type="button" class="hero-button" data-modal-open>Order Service</button>
         </div>
         </section>
+
+        <!-- modal window -->
+        <div class="window-backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close" data-modal-close>
+                    <svg class="icon" width="8" height="8">
+                        <use href="./images/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
       
 
         <section class="section about-section ">
@@ -234,8 +245,6 @@
                 </ul>
             </div>
 
-
-
         </section>
 
     </main>
@@ -270,13 +279,13 @@
                             <svg class="footer-social-media-icon" width="16" height="16">
                                 <use href="images/icons.svg#linkedin"> </use>
                             </svg> </a>
+
                     </li>
                 </ul>
             </li>
         </ul>
          
-          
-
     </footer>
+    <script src="modal.js"></script>
 </body>
 </html>
