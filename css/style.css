@@ -143,13 +143,9 @@ position: relative;
 
 }
 
-.nav-list-item:hover .nav-link::after{
-    height: 4px;
-    
-}
 
 
-.nav-list-item:focus, .nav-list-item:hover, 
+.nav-list-item:focus, .nav-list-item:hover 
  .nav-link {
     color: var(--oceancolor);
     transition-property: background-color;
@@ -169,13 +165,18 @@ position: relative;
     bottom: -25px;
 }
 
- .studio-item::after {
+.nav-list-item:hover .nav-link::after {
     height: 4px;
-}
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-.portfolio-item::after{
-    height: 4px;
+
 }
+ .studio-item::after,
+ .portfolio-item::after {
+     height: 4px;
+ }
+
 
 
 
@@ -192,9 +193,10 @@ position: relative;
 .address-link:hover,
  .address-link:focus{
     color: var(--oceancolor);
-    
-    
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
  .about-img{
     padding: 24px 100px;
     border-radius: 4px;
@@ -507,6 +509,9 @@ gap: 24px;
 
 .team-social-media-item:hover {
     background: var(--oceancolor);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .team-social-media-icon, 
 .footer-social-media-icon{
@@ -544,6 +549,8 @@ gap: 24px;
 .customer-list-item:hover {
     border: 1px solid var(--oceancolor);
     color: var(--oceancolor);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .customer-icon{
@@ -606,6 +613,8 @@ color:var(--cloudcolor);
 
   .footer-social-media-item:hover{
     background-color: var(--greencolor);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
   }
 
@@ -683,10 +692,6 @@ flex-basis: calc((1158px- 48px)/3);
 background-color: var(--whitecolor);
 }
 
-
-
-
-
 .product-list-details{
     display: flex;
     padding: 32px 16px;
@@ -701,12 +706,14 @@ background-color: var(--whitecolor);
 
     .product-list-item:hover .product-list-details{
         border: var(--cloudcolor);
-        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        box-shadow: 
+                0px 2px 1px 0px rgba(46, 47, 66, 0.08),
                 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
                 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        transition-duration: var(--transition-duration);
+         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         }
 
@@ -717,7 +724,7 @@ margin-bottom: 8px;
 
 
 
-/**********port-card-overlay ************/
+/**********portfolio-card-overlay ************/
 .product-card-figure {
     position: relative;
     overflow: hidden;
